@@ -1,5 +1,5 @@
 Django==1.10
-Janja2==2.9.6
+Jinja2==2.9.6
 Markdown==2.6.8
 jieba==0.38
 pytz==2016.10

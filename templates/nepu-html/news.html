@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main %}
+    <div class="container">
+        <div id="myCarousel" class="carousel slide">
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>   
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="{% static 'img/n-banner1.jpg' %}" alt="First slide">
+                    <div class="carousel-caption">俯视</div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/n-banner2.jpg' %}" alt="Second slide">
+                    <div class="carousel-caption">新实验楼</div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/n-banner3.jpg' %}" alt="Third slide">
+                    <div class="carousel-caption">图书馆</div>
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="carousel-control left" href="#myCarousel" 
+                data-slide="prev">&lsaquo;
+            </a>
+            <a class="carousel-control right" href="#myCarousel" 
+                data-slide="next">&rsaquo;
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1>&nbsp;<span class="glyphicon glyphicon-list-alt">&nbsp;</span>新闻中心</h1>
+                <br>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#home">通知公告</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu1">校园新闻</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu2">每周工作</a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                      <div id="home" class="container tab-pane active"><br>
+                          <ul class="list-group col-sm-8">
+                              <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>关于举办我校2017年教职工乒乓球比赛的通知
+                          <span class="pull-right">11月13日</span>
+                      </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>关于举行我校教职工跳绳比赛的通知
+                                  <span class="pull-right">11月12日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校周转房家具设备采购项目成交结果公告
+                                  <span class="pull-right">11月10日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校“争做文明学生共创文明集体”创建项目实施方案
+                                  <span class="pull-right">11月9日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>秦皇岛市高校师生反邪教主题书签设计作品征集启事
+                                  <span class="pull-right">11月8日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校周转房维修工程项目竞争性谈判公告
+                                  <span class="pull-right">11月2日</span>
+                              </a>
+                          </ul>
+                      </div>
+                      <div id="menu1" class="container tab-pane fade"><br>
+                          <ul class="list-group col-sm-8">
+                              <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>关于举办我校2017年教职工乒乓球比赛的通知
+                          <span class="pull-right">11月13日</span>
+                      </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>关于举行我校教职工跳绳比赛的通知
+                                  <span class="pull-right">11月12日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校周转房家具设备采购项目成交结果公告
+                                  <span class="pull-right">11月10日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校“争做文明学生共创文明集体”创建项目实施方案
+                                  <span class="pull-right">11月9日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>秦皇岛市高校师生反邪教主题书签设计作品征集启事
+                                  <span class="pull-right">11月8日</span>
+                              </a>
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校周转房维修工程项目竞争性谈判公告
+                                  <span class="pull-right">11月2日</span>
+                              </a>
+                          </ul>
+                      </div>
+                      <div id="menu2" class="container tab-pane fade"><br>
+                        <ul class="list-group col-sm-8">
+                              <a href="#" class="list-group-item list-group-item-action">
+                                  <span class="glyphicon glyphicon-hand-right">&nbsp;</span>Second itemSecond itemSecond itemSecond 
+                                  <span class="pull-right">右浮动</span>
+                              </a>
+                          </ul>
+                      </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <form class="bs-example bs-example-form" role="form">             
+                    <br>
+                    <div class="input-group">
+                      <input type="text" class="form-control">
+                      <span class="input-group-addon"><button type="submit">搜索</button></span>
+                    </div>
+                    <br>  
+                </form>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-education"></span>&nbsp;&nbsp;热点新闻</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">关于2013年寒假放假的通知</li>
+                        <li class="list-group-item">关于2013年暑期放假的通知</li>
+                        <li class="list-group-item">关于2014年元旦和寒假放假</li>
+                        <li class="list-group-item">我校举行2012届毕业典礼</li>
+                        <li class="list-group-item">我校成功举办教职工摄影大赛</li>
+                        <li class="list-group-item">我校举行2013届毕业典礼</li>
+                        <li class="list-group-item">我校举行2014届毕业典礼</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div id="myCarousel" class="carousel slide">
+                    <!-- 轮播（Carousel）指标 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>   
+                    <!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{% static 'img/banner1.jpg' %}" alt="First slide">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'img/banner2.jpg' %}" alt="Second slide">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'img/banner3.jpg' %}" alt="Third slide">
+                        </div>
+                    </div>
+                    <!-- 轮播（Carousel）导航 -->
+                    <a class="carousel-control left" href="#myCarousel" 
+                        data-slide="prev">&lsaquo;
+                    </a>
+                    <a class="carousel-control right" href="#myCarousel" 
+                        data-slide="next">&rsaquo;
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                    <button type="button" class="btn btn-default btn-lg btn-block" disabled="disabled">
+                           <h3><span class="glyphicon glyphicon glyphicon-send"></span>
+                          &nbsp;&nbsp;&nbsp;&nbsp;快速导航&nbsp;&nbsp;&nbsp;&nbsp;
+                          <span class="glyphicon glyphicon glyphicon-send"></span>
+                          </h3>
+                    </button>
+                    <br>
+                    <a class="btn btn-primary btn-lg btn-block">教务系统</a>
+                    <a href="{% url 'nepuapp:news' %}" class="btn btn-primary btn-lg btn-block">新闻中心</a>
+                    <a class="btn btn-primary btn-lg btn-block">校园FTP</a>
+                    <a class="btn btn-primary btn-lg btn-block">VPN访问</a>
+                    <a class="btn btn-primary btn-lg btn-block">查询系统</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;&nbsp;新闻摘要</h3>
+                    <h4><p class="text-center">我校深入开展新生入党启蒙教育活动</p></h4>
+                    <blockquote class="blockquote">
+                        <p>10月31日下午，分校党委书记石瑞祥在2教101为大一、大二的全体学生干部计100余人，上了严肃而生动的一堂党课——《中国共产党党史》。</p>
+                        <p>整个课程涵盖了五大方面：一是中国共产党的诞生；二是中国共产党成立初期；三是全面抗战、中国共产党壮大成熟；四是解放战争、成立新中国；五是豪情满怀、建设新中国。同时他强调中国共产党成立的96年里主要做了三件大事</p>
+                        <a href=""></a>
+                        <footer class="blockquote-footer">----新闻中心</footer>
+                    </blockquote>
+            </div>
+            <div class="col-sm-4">
+                <h3><span class="glyphicon glyphicon-flag"></span>&nbsp;&nbsp;专题报道</h3>
+                <div class="list-group">
+                    <img src="{% static 'img/project.jpg' %}" class="img-thumbnail" alt="热点新闻">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                    <h3><span class="glyphicon glyphicon-education"></span>&nbsp;&nbsp;校园新闻&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><a href="">更多&gt;&gt;</a></small></h3>
+                    <ul class="list-group">
+                        {% for list in school_list %}
+                            <a href="{{ list.get_absolute_url }}" class="list-group-item list-group-item-action">
+                                <span class="glyphicon glyphicon-hand-right">&nbsp;</span>{{ list.title }}
+                                <span class="pull-right">{{ list.modified_time|date:"m月d日"}}</span>
+                            </a>
+                        {% empty %}
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <span class="glyphicon glyphicon-hand-right">&nbsp;</span>暂时还没有发布的文章！
+                            </a>
+                        {% endfor %}
+                    </ul>
+              </div>
+            <div class="col-sm-6">
+                  <h3><span class="glyphicon glyphicon-bell"></span>&nbsp;&nbsp;通知公告&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><a href="">更多&gt;&gt;</a></small></h3>
+                  <ul class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>关于举办我校2017年教职工乒乓球比赛的通知
+                          <span class="pull-right">11月13日</span>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>关于举行我校教职工跳绳比赛的通知
+                          <span class="pull-right">11月12日</span>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校周转房家具设备采购项目成交结果公告
+                          <span class="pull-right">11月10日</span>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校“争做文明学生共创文明集体”创建项目实施方案
+                          <span class="pull-right">11月9日</span>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>秦皇岛市高校师生反邪教主题书签设计作品征集启事
+                          <span class="pull-right">11月8日</span>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">
+                          <span class="glyphicon glyphicon-hand-right">&nbsp;</span>东北石油大学秦皇岛分校周转房维修工程项目竞争性谈判公告
+                          <span class="pull-right">11月2日</span>
+                      </a>
+                  </ul>
+              </div>
+        </div>
+    </div>
+    <br>
+{% endblock main %}

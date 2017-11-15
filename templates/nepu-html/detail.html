@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+                        <h1>{{ post.title }}</h1>
+                        <p>
+                            <span>分类：{{ post.category.name }}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span>作者：{{ post.author }}</span>
+                            <span>日期：<time class="entry-date" datetime="{{ post.created_time }}">{{ post.created_time }}</time></span>
+                        </p>
+                        <p>{{ post.body }}</p>
+                    </div>                  
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading"><br>
+                        <h3 class="panel-title">栏目导航</h3>
+                    </div>
+                    <ul class="list-group">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">校园新闻</a></h4>
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">通知公告</a></h4>
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">每周工作</a></h4>
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">文件下发</a></h4>
+                    </ul>
+                </div>
+                <div class="panel panel-success">
+                    <div class="panel-heading"><br>
+                        <h3 class="panel-title">热点新闻</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">关于2013年寒假放假的通知</li>
+                        <li class="list-group-item">关于2013年暑期放假的通知</li>
+                        <li class="list-group-item">关于2014年元旦和寒假放假</li>
+                        <li class="list-group-item">我校举行2012届毕业典礼</li>
+                        <li class="list-group-item">我校成功举办教职工摄影大赛</li>
+                        <li class="list-group-item">我校举行2013届毕业典礼</li>
+                        <li class="list-group-item">我校举行2014届毕业典礼</li>
+                    </ul>
+                </div>
+            </div>
+      </div>
+    </div>
+
+{% endblock main %}

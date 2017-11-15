@@ -1,0 +1,10 @@
+Django==1.10
+Janja2==2.9.6
+Markdown==2.6.8
+jieba==0.38
+pytz==2016.10
+virtualenv==15.1.0
+django-haystack==2.6.1
+Whoosh==2.7.4
+Pygments==2.2.0
+setuptools==28.8.0

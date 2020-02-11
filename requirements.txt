@@ -1,4 +1,4 @@
-Django==1.10
+Django==1.11.28
 Jinja2==2.9.6
 Markdown==2.6.8
 jieba==0.38
